@@ -6,7 +6,7 @@ Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 class TestSportsTean < MiniTest::Test
 
     def setup
-        @team = SportsTeam.new("Raith Rovers", ["Dennis", "Alan", "Dave"], "Eugene")
+        @team = SportsTeam.new("Raith Rovers", ["Dennis", "Alan", "Dave"], "Eugene", 0)
     end
 
     def test_get_team_name
@@ -25,4 +25,10 @@ class TestSportsTean < MiniTest::Test
         @team.coach = "Rory"
         assert_equal("Rory", @team.coach)
     end
+
+    def test_add_new_player_to_team
+        assert_equal(["Dennis", "Alan", "Dave", "Messi"], @team.add_player_to_team("Messi"))        
+    end
+
+
 end
