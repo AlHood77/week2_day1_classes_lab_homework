@@ -7,8 +7,8 @@ class CodeClanStudent
         @student_cohort = student_cohort
     end
 
-def student_can_talk(talk)
-    return talk
+    def student_can_talk(talk)
+      return talk
 end
 
 def favourite_language(language)
