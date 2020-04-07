@@ -7,7 +7,7 @@ attr_accessor :coach, :players, :score
         @team_name = team_name
         @players = players
         @coach = coach
-        @score = score
+        @score = score #can be initialized to 0 
     end
 
     def add_player_to_team(new_player)
